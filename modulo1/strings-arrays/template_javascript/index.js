@@ -37,21 +37,21 @@ console.log(frase.toUpperCase().replaceAll("A", "I"), frase.length)
 
 // 1
 
-// let nome = prompt("Digite seu nome!")
-// let email = prompt("Digite seu Email!")
+let nome = prompt("Digite seu nome!")
+let email = prompt("Digite seu Email!")
 
-// console.log(`O email ${email.trim()} foi cadastrado com sucesso. Seja bem vindo(a), ${nome}`)
+console.log(`O email ${email.trim()} foi cadastrado com sucesso. Seja bem vindo(a), ${nome}`)
 
 
 // 2
 
-// let array = ['Lasanha', 'Macarrao', 'Hamburgue', 'Pizza', 'Carne']
-// console.log(array)
+let arrayComidas = ['Lasanha', 'Macarrao', 'Hamburgue', 'Pizza', 'Carne']
+console.log(arrayComidas)
 
-// console.log("Essas são as minhas comidas preferidas:\n", array[0] ,"\n", array[1] ,"\n" , array[2] , "\n" , array[3] , "\n" , array[4])
+console.log("Essas são as minhas comidas preferidas:\n", arrayComidas[0] ,"\n", arrayComidas[1] ,"\n" , arrayComidas[2] , "\n" , arrayComidas[3] , "\n" , arrayComidas[4])
 
-// array[1] = prompt('Digite sua comida preferida!')
-// console.log(array)
+arrayComidas[1] = prompt('Digite sua comida preferida!')
+console.log(arrayComidas)
 
 // 3
 
