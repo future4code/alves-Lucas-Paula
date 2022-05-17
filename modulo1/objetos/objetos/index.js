@@ -145,7 +145,7 @@ let sacolao = function (fruta1, fruta2, fruta3) {
 
 }
 
-carrinho = sacolao(fruta1, fruta2, fruta3)
+sacolao(fruta1, fruta2, fruta3)
 
 // D -
 
