@@ -116,4 +116,3 @@ console.log(nomePok)
 
 let novaArray = new Set(pokemons.map((pokemon) => pokemon.tipo)) // copiar apenas um elemento sem repetir
 console.log(novaArray)
-
