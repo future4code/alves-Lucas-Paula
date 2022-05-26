@@ -19,6 +19,13 @@ h2 {
 input {
     height: 20px;
     width: 500px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#buscar{
+    max-width: 30px
 }
 
 button:focus {
@@ -151,5 +158,4 @@ td button {
 
 td {
     padding: 5px 0px 5px 0px;
-    border-bottom: 1px solid black;
 }
