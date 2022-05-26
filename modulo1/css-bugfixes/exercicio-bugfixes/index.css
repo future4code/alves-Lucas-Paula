@@ -22,10 +22,17 @@ input {
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom-width: 2px;
 }
 
 #buscar{
-    max-width: 30px
+    max-width: 30px;
+}
+#clicando:hover{
+    opacity: 0.5;
+}
+#clicando:active{
+    opacity: 1;
 }
 
 button:focus {
@@ -44,7 +51,7 @@ div img {
     background: black;
 }
 
-body{
+body {
     font-family: roboto, arial, helvetica, sans-serif;
 }
 
@@ -97,6 +104,7 @@ body{
     font-size: 60px;
     display: block;
 }
+
 
 
 /**
