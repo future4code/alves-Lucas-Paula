@@ -1,0 +1,110 @@
+html,
+body,
+figure,
+img,
+div,
+input,
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 1125px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+body {
+    background-color: aqua;
+}
+
+header {
+    margin-top: 50px;
+    text-align: center;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.253);
+}
+
+header>.container>p{
+    padding-top: 10px;
+}
+
+nav {
+    text-align: center;
+}
+
+a {
+    color: black;
+}
+
+img {
+    padding-top: 10px;
+    max-width: 30px;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+main>.container>img {
+    max-width: 500px;
+    border-radius: 1rem;
+}
+
+section>h1 {
+    padding-top: 10px;
+}
+
+#produtoPrevia {
+    display: flex;
+}
+
+#produtoPrevia>div {
+    margin: 0 auto;
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.479);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#produtoPrevia>div>a>img {
+    max-width: 100px;
+}
+
+#melao{
+    padding-top: 15px
+}
+
+footer {
+    text-align: center;
+    background-color: #041330;
+    color: white;
+}
+
+footer>.container {
+    background: #041330;
+}
+
+footer>.container>img {
+    margin: 0px 10px 0px 10px;
+}
