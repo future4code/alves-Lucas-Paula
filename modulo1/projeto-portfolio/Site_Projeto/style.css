@@ -21,6 +21,10 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+a {
+    color: black;
+}
+
 #cabecalho {
     display: flex;
 }
@@ -42,54 +46,82 @@ body {
     font-weight: bold;
 }
 
-.corLink{
-    color: black;
+/* Conteudo Principal do Portifolio */
+
+#colunas {
+    display: flex;
 }
 
-/* Conteudo do Portifolio */
+#imagem_Butao {
+    max-width: 20px;
+    background-color: white
+}
 
-#infoPessoal {
-    background-color: #F1F8FA;
+input {
+    padding-top: 8px;
+}
+
+button,input {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+form>h2 {
+    padding-bottom: 20px;
+    color: rgba(0, 0, 0, 0.521);
+    font-size: 13px;
+}
+
+#entrada_Dados {
+    padding: 10px;
     border-radius: 10px;
-    line-height: 30px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.178);
+    border: 1px solid black;
+    display: flex;
 }
 
-#infoPessoal>h1 {
-    padding: 30px;
-}
-
-#infoPessoal>p {
-    padding: 20px;
-    color: rgba(0, 0, 0, 0.459);
-    text-align: justify;
-}
-
-#artigo {
-    margin-top: 80px;
-}
-
-.conteudo {
-    margin-top: 50px;
-}
-
-.conteudo>a {
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.conteudo>p {
-    color: rgba(0, 0, 0, 0.459);
-    padding-top: 20px;
+#esquerda_Baixo>h2 {
     font-size: 15px;
-}
-
-.conteudo>nav {
     margin-top: 50px;
-    color: #4B6CC1;
+    color: rgba(0, 0, 0, 0.521)
 }
 
-.conteudo>section {
+#esquerda_Baixo>p {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px;
+    color: #4B6CC1;
+    border: 1px solid #4B6CC1;
+    border-radius: 5px;
+}
+
+#esquerda_Baixo>p:hover {
+    color: black;
+    border-color: black;
+}
+
+#Coluna_Direita {
+    text-align: justify;
+    padding-left: 20px;
+}
+
+#Coluna_Direita>h2 {
+    padding-top: 20px;
+}
+
+picture>img {
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+#Coluna_Direita>p {
+    padding-top: 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.603);
+}
+
+#fundo {
     margin-top: 50px;
     border-bottom: 5px solid rgba(0, 0, 0, 0.199);
     border-radius: 10px;
