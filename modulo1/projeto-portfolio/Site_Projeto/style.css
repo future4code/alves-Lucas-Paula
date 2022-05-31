@@ -1,0 +1,154 @@
+/* CSS Globais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 1125px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+/* Cabeçalho do Portifolio */
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+a {
+    color: black;
+}
+
+#cabecalho {
+    display: flex;
+}
+
+#perfil>img {
+    max-width: 100px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+#infoPerfil>nav {
+    padding-top: 20px;
+}
+
+#infoPerfil>nav>a {
+    font-size: 20px;
+    padding-right: 20px;
+    color: rgb(0, 0, 0, 0.459);
+    font-weight: bold;
+}
+
+/* Conteudo Principal do Portifolio */
+
+#colunas {
+    display: flex;
+}
+
+#imagem_Butao {
+    max-width: 20px;
+    background-color: white
+}
+
+input {
+    padding-top: 8px;
+}
+
+button,input {
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+form>h2 {
+    padding-bottom: 20px;
+    color: rgba(0, 0, 0, 0.521);
+    font-size: 13px;
+}
+
+#entrada_Dados {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+}
+
+#esquerda_Baixo>h2 {
+    font-size: 15px;
+    margin-top: 50px;
+    color: rgba(0, 0, 0, 0.521)
+}
+
+#esquerda_Baixo>p {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px;
+    color: #4B6CC1;
+    border: 1px solid #4B6CC1;
+    border-radius: 5px;
+}
+
+#esquerda_Baixo>p:hover {
+    color: black;
+    border-color: black;
+}
+
+#Coluna_Direita {
+    text-align: justify;
+    padding-left: 20px;
+}
+
+#Coluna_Direita>h2 {
+    padding-top: 20px;
+}
+
+picture>img {
+    margin-top: 30px;
+    max-width: 600px;
+}
+
+#Coluna_Direita>p {
+    padding-top: 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.603);
+}
+
+#fundo {
+    margin-top: 50px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.199);
+    border-radius: 10px;
+}
+
+/* Footer do Portifolio */
+
+.container>p {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#redes-sociais {
+    display: flex;
+}
+
+#redes-sociais>li {
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#redes-sociais>li>a>img {
+    margin-left: 15px;
+    max-width: 25px;
+    border-radius: 5px;
+}
+
+#redes-sociais>li>a>p {
+    padding: 0px 0px 0px 0px;
+}
