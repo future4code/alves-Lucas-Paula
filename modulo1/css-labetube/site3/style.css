@@ -33,9 +33,9 @@ input {
 
 /* Main */
 
-video{
+video {
     height: 792px;
-    
+
 }
 
 #video {
@@ -43,11 +43,25 @@ video{
     text-align: center;
 }
 
+
 /* Footer */
 
 footer h1 {
     background-color: #323B3E;
     color: white;
     padding: 1vw;
+
+}
+
+@media screen and (max-width: 800px) {
+    video {
+        max-width: 100%;
+    }
+
+    footer {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
 
 }
