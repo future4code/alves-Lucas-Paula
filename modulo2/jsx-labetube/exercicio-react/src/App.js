@@ -30,7 +30,7 @@ function App() {
         <main>
           <nav className="menu-vertical">
             <ul>
-              <li className="botoes-meunu-vertical"><img className="icone" src={inicio} />Início</li>
+              <li className="botoes-meunu-vertical"><img className="icone" src={inicio} />Início </li>
               <li className="botoes-meunu-vertical"><img className="icone" src={busca} />Explorar</li>
               <li className="botoes-meunu-vertical"><img className="icone" src={inscritos} />Inscrições</li>
               <hr />
