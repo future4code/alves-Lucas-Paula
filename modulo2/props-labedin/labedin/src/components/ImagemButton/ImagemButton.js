@@ -20,7 +20,7 @@ function ImagemButton(props) {
     return (
         <Container>
             <Imagem src={props.imagem} />
-            <p>{props.texto}</p>
+            <p>{props.texto }</p>
         </Container>
 
     )
