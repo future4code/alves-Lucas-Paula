@@ -7,7 +7,7 @@ const IconContainer = styled.div`
 const IconImage = styled.img`
     width: 70%;
     height: 70%;
-    margin-top: 1.7vw;
+    margin-top: 0.8vw;
     margin-right: 5px;
 `
 

@@ -55,7 +55,11 @@ class Post extends React.Component {
     salvo: false,
     numeroSalvo: 0,
     compartilhar: false,
-    numeroCompartilhado: 0
+    numeroCompartilhado: 0,
+    fotoUsuario: "",
+    nomeUsuario: "",
+    fotoPost: ""
+
   }
 
   onClickCurtida = () => {
@@ -110,7 +114,7 @@ class Post extends React.Component {
       numeroCompartilhado: this.state.numeroCompartilhado + 1
     })
   }
-  
+
 
   render() {
     let iconeCurtida
@@ -138,8 +142,6 @@ class Post extends React.Component {
     if (this.state.compartilhar) {
       componenteCompartilhar = <SecaoCompartilhamento confirma={this.confirmaCompartilhar} />
     }
-
-
 
     return <PostContainer>
       <PostHeader>
