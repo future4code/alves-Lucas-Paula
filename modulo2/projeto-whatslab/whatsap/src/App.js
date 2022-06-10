@@ -5,7 +5,7 @@ import TelaPrincipal from './components/TelaPrincipal/TelaPrincipal'
 function App() {
   return (
     <div>
-      <TelaPrincipal></TelaPrincipal>
+      <TelaPrincipal> </TelaPrincipal>
     </div>
   )
 }
