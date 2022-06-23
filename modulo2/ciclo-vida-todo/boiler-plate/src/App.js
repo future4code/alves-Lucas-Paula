@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import './styles.css'
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 const TarefaList = styled.ul`
   padding: 0;
   width: 200px;
@@ -16,6 +21,10 @@ const InputsContainer = styled.div`
   display: grid;
   grid-auto-flow: column;
   gap: 10px;
+`
+
+const Botao = styled.button`
+  margin-left: auto;
 `
 
 class App extends React.Component {
@@ -34,13 +43,15 @@ class App extends React.Component {
     filtro: ''
   }
 
+  componentDidUpdate() {
+  }
+
   componentDidMount() {
     this.getData();
   };
 
   onChangeInput = (event) => {
     this.setState({ inputValue: event.target.value })
-    localStorage.setItem("texto", this.state.inputValue);
   }
 
   criaTarefa = () => {
@@ -59,12 +70,18 @@ class App extends React.Component {
   }
 
   getData = () => {
-    const texto = localStorage.getItem("texto");
-    this.setState({ inputValue: texto });
-
     let lista = localStorage.getItem("lista");
     const listaConvertida = JSON.parse(lista);
     listaConvertida && this.setState({ tarefas: listaConvertida });
+  }
+
+  removeTarefa = (id) => {
+    let removendoTarefa = this.state.tarefas.filter((tarefas) => {
+      return id !== tarefas.id
+
+    })
+
+    this.setState({tarefas: removendoTarefa});
   }
 
   selectTarefa = (id) => {
@@ -119,13 +136,16 @@ class App extends React.Component {
         <TarefaList>
           {listaFiltrada.map(tarefa => {
             return (
+              <Container>
               <Tarefa
                 completa={tarefa.completa}
                 onClick={() => this.selectTarefa(tarefa.id)}
               >
                 {tarefa.texto}
-          
+      
               </Tarefa>
+              <Botao onClick={() => this.removeTarefa(tarefa.id)}>Remover</Botao>
+              </Container>
             )
           })}
         </TarefaList>
