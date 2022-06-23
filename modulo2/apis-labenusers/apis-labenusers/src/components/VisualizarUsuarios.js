@@ -32,8 +32,8 @@ export default class VisualizarUsuarios extends Component {
     }
 
     deletarUsuariosAPI = (id) => {
-        let confirmação = window.confirm('Digite SIM ou NÃO para deletar o usuarios!').toLowerCase()
-        if (confirmação === true) {
+        let confirmação = window.confirm('Digite SIM ou NÃO para deletar o usuarios!')
+        if (confirmação) {
             axios.delete(`https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`, {
                 headers: {
                     "Authorization": "lucas-rafael-alves"
@@ -48,10 +48,8 @@ export default class VisualizarUsuarios extends Component {
             })
 
             alert('Usuario deletado com sucesso!')
-        } else if (confirmação === false) {
-            return alert(`Usuario não sera deletado!`)
         } else {
-            return alert('Erro :( Confirme se digitou sim ou não!')
+            return alert(`Usuario não sera deletado!`)
         }
     }
 
