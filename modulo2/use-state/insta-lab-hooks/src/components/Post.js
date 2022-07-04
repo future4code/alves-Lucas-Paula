@@ -13,11 +13,11 @@ function Post(props) {
   // Passo7
   const onClickCurtida = () => {
     // Crie a lógica de onClickCurtida aqui.
-    if(telaCurtida){
-      setCurtida(curtida + 1) 
+    if (telaCurtida) {
+      setCurtida(curtida + 1)
       setTelaCurtida(false)
     } else {
-      setCurtida(curtida - 1) 
+      setCurtida(curtida - 1)
       setTelaCurtida(true)
     }
   };
@@ -25,7 +25,7 @@ function Post(props) {
   // Passo7
   const onClickComentario = () => {
     // Crie a lógica de onClickComentario aqui.
-    if(trocaTela){
+    if (trocaTela) {
       setTrocaTela(false)
     } else {
       setTrocaTela(true)
@@ -48,7 +48,7 @@ function Post(props) {
     setTrocaTela(false)
   };
 
-  {/* Passo6 */ }
+  /* Passo6 */
   const caixaDeComentario = trocaTela ? (
     <>
       <label htmlFor={"comentario"} >Comente: </label>
@@ -64,13 +64,13 @@ function Post(props) {
   ) : (
     // Passo8
     <>
-    {listaComent.map((comentario, index) => {
-      return (
-        <div key={index}>
-          <p>{comentario}</p>
-        </div>
-      )
-    })}
+      {listaComent.map((comentario, index) => {
+        return (
+          <div key={index}>
+            <p>{comentario}</p>
+          </div>
+        )
+      })}
     </>
   );
 
