@@ -1,8 +1,15 @@
 import React, { useState } from 'react'
-import Header from './Components/Header'
-import Perfil from './Components/Perfil'
-import Match from './Components/Match'
+import styled from 'styled-components'
+import Header from './Components/Header/Header'
+import Perfil from './Components/Perfil/Perfil'
+import Match from './Components/Match/Match'
 
+const Main = styled.div`
+  padding: 20px 20px; 
+`
+const Body = styled.div`
+  background-color: red;
+`
 
 function App() {
 
@@ -18,25 +25,25 @@ function App() {
 
   switch (trocaTela) {
     case true:
-      return telas = <div>
+      return telas = <Main>
         <Header trocaTela={trocandoTela} nameBotao={trocaTela} />
         <Perfil />
-      </div>
+      </Main>
 
     case false:
-      return telas = <div>
+      return telas = <Main>
         <Header trocaTela={trocandoTela} />
         <Match />
-      </div>
+      </Main>
 
     default:
       break;
   }
 
   return (
-    <div>
+    <Body>
       {telas}
-    </div>
+    </Body>
   );
 }
 
