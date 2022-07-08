@@ -23,10 +23,9 @@ function Perfil(props) {
             .then((respota) => {
                 setPerfil(respota.data.profile)
                 setPerfilID(respota.data.profile.id)
-                console.log(respota.data.profile)
             })
-            .catch(error => {
-                console.log(error.message)
+            .catch(erro => {
+                alert(`Foi encontrado o seguinte erro: ${erro.message}`)
             })
     }
 
