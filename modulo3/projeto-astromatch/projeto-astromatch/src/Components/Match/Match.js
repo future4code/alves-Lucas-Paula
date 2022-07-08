@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Container, Imagem } from './MatchCss'
+import { Container, Imagem, Separacao } from './MatchCss'
+import { BotaoHeader } from '../Header/HeaderCss'
 
-function Match() {
+function Match(props) {
 
   const [perfil, setPerfil] = useState([])
-  const [controlador, setControlador] = useState(true)
 
   useEffect(() => {
     getMatches('lucas')
-  }, [controlador])
+  }, [props.controlador])
 
   const getMatches = function (aluno) {
 
@@ -18,20 +18,9 @@ function Match() {
         setPerfil(resposta.data.matches)
         console.log(resposta.data.matches)
       }).catch((erro) => {
-        console.log(erro.message);
+        alert(`Foi encontrado o seguinte erro: ${erro.message}`)
       })
 
-  }
-
-  const clear = function (aluno) {
-    axios.put(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/clear`)
-      .then((respota) => {
-        console.log(respota)
-        setControlador(!controlador)
-      })
-      .catch((erro) => {
-        console.log(erro.message)
-      })
   }
 
   return (
@@ -39,10 +28,13 @@ function Match() {
       {perfil.map((match, index) => {
         return <div key={index}>
           <Imagem src={match.photo} alt={match.photo_alt} />
-          <p>{match.name}</p>
+          <p><strong>{match.name}</strong></p>
+          <Separacao />
         </div>
       })}
-      <button onClick={() => clear('lucas',)}>Limpar Matchs</button>
+      <br />
+      <p>Excluir todos os perfis.</p>
+      <BotaoHeader onClick={() => props.limparPerfil('lucas')}>Limpar Matchs</BotaoHeader>
     </Container>
   )
 }

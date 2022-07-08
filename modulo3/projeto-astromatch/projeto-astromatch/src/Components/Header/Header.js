@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Botao, Titulo } from './HeaderCss'
+import { Container, BotaoHeader, Titulo } from './HeaderCss'
 
 function Header(props) {
 
@@ -12,7 +12,7 @@ function Header(props) {
     return (
         <Container>
             <Titulo>AstroMatch</Titulo>
-            <Botao onClick={props.trocaTela}>{nomeButao ? 'Ir para matches' : 'Ir para Perfis'}</Botao>
+            <BotaoHeader onClick={props.trocaTela}>{nomeButao ? 'Ir para matches' : 'Ir para Perfis'}</BotaoHeader>
         </Container>
     )
 }

@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     text-align: center;
-    border: 1px solid black;
+    border: 5px solid black;
     border-bottom: none;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-image: linear-gradient(to right, #7FBFB6, #762D93);
+    border-image-slice: 1;
 `
-export const Botao = styled.button`
+export const BotaoHeader = styled.button`
     position:relative;
     transition: all .2s ease-in-out;
     width: 150px;
@@ -18,6 +18,7 @@ export const Botao = styled.button`
     border-color: #762D93;
     color: white;
     font-size: 15px;
+    margin-bottom: 10px;
     :hover{
     top:-4px;
     box-shadow:0 4px 3px #999;
