@@ -24,6 +24,9 @@ Adicionar pessoas de perfis diferentes que mais gostou em seu perfil.
 
 ![image](https://user-images.githubusercontent.com/79646846/177998516-aee90aed-3373-42ae-a25f-8c0a7eb82f3a.png)
 
+![image](https://user-images.githubusercontent.com/79646846/178000193-675ad169-3653-484f-8dbe-d1d4e1652726.png)
+
+![image](https://user-images.githubusercontent.com/79646846/178000279-3c8a0989-28cd-4900-8800-eeb7d07e3d8f.png)
 
 ## 👩🏻‍💻 Desenvolvedor
 Lucas Rafael Martins de Paula
