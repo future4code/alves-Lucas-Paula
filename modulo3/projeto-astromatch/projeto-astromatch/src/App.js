@@ -49,8 +49,8 @@ function App() {
 
   const clear = function (aluno) {
     axios.put(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/clear`)
-      .then((respota) => {
-        console.log(respota)
+      .then(() => {
+        alert('Perfil limpado com sucesso!')
         setControlador(!controlador)
       })
       .catch((erro) => {

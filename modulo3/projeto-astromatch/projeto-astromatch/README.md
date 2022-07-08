@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# AstroMatch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔗 Link Surge
+https://astromatch-dk.surge.sh
 
-## Available Scripts
+## 📏 Funcionalidades
+Adicionar pessoas de perfis diferentes que mais gostou em seu perfil.
 
-In the project directory, you can run:
+### Filtros de Perfil
+Área para filtrar os perfis das pessoas, podendo selecionar em gostei ou rejeitar.
 
-### `npm start`
+### Home
+Área com pefis de varias pessoas diferntes, mudando toda vez que clicar em gostei ou rejeitar, quando chegar em um limite de pessoas adicionadas é renderizado uma tela a onde você precisa excluir os pefis selecionados para escolher outros.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Match
+Área a onde mostra as pessoas selecionadas, podendo excluir todas se assim desejar.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📸 Imagens
+![image](https://user-images.githubusercontent.com/79646846/177995425-cf2dabed-ee58-4a57-bf8a-8f9a9d0d33dd.png)
 
-### `npm test`
+![image](https://user-images.githubusercontent.com/79646846/177995512-f6e730b9-d5a1-48fc-af68-31ab52c4a9d4.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://user-images.githubusercontent.com/79646846/177998456-2321ee35-e875-48ed-ae47-9ed8a28da459.png)
 
-### `npm run build`
+![image](https://user-images.githubusercontent.com/79646846/177998516-aee90aed-3373-42ae-a25f-8c0a7eb82f3a.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 👩🏻‍💻 Desenvolvedor
+Lucas Rafael Martins de Paula
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

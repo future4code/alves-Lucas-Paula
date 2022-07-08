@@ -39,12 +39,18 @@ function Perfil(props) {
 
         axios.post(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/choose-person`, body)
             .then((respota) => {
-                console.log(respota.data)
-                if (respota.data.isMatch) {
-                    alert('Esta pessoa tambem deu match em você!')
-                    setAtualizaPerfil(!atualizaPerfil)
+                if (choice) {
+
+                    if (respota.data.isMatch) {
+                        alert('Esta pessoa tambem deu match em você!')
+                        setAtualizaPerfil(!atualizaPerfil)
+                    } else {
+                        alert('Esta pessoa não deu match em você!')
+                        setAtualizaPerfil(!atualizaPerfil)
+                    }
+
                 } else {
-                    alert('Esta pessoa não deu match em você!')
+                    alert('Você pulou essa pessoas')
                     setAtualizaPerfil(!atualizaPerfil)
                 }
             }).catch((erro) => {

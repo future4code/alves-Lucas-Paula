@@ -16,7 +16,6 @@ function Match(props) {
     axios.get(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/${aluno}/matches`)
       .then((resposta) => {
         setPerfil(resposta.data.matches)
-        console.log(resposta.data.matches)
       }).catch((erro) => {
         alert(`Foi encontrado o seguinte erro: ${erro.message}`)
       })
