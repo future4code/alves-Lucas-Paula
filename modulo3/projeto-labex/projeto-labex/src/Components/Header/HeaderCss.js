@@ -6,11 +6,11 @@ export const Cabecalho = styled.div`
     justify-content: space-evenly;
     padding: 10px;
     background-image: url(${TelaFundo});
-    height: 750px;
+
 
 `
 
-export const Navegacao = styled.h3`
+export const Navegacao = styled.a`
     color: white;
     height: 30px;
     :hover{
