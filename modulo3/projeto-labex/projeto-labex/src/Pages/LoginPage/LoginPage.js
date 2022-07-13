@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../../Components/BaseURL'
-import { voltar } from '../../Router/Coordinator'
+import { trocaTela, admin } from '../../Router/Coordinator'
 import { Main, Botao, CampoTexto, Label } from './LoginCss'
 
 function LoginPage() {
@@ -14,14 +14,12 @@ function LoginPage() {
   const pegaUsuario = (e) => {
 
     setUsuario(e.target.value)
-    console.log(e.target.value)
 
   }
 
   const pegaUSenha = (e) => {
 
     setSenha(e.target.value)
-    console.log(senha)
 
   }
 
@@ -34,16 +32,16 @@ function LoginPage() {
 
     axios.post(`${BASE_URL}login`, body)
       .then((response) => {
-        console.log(response.status)
+        localStorage.setItem('token', response.data.token)
         setUsuario('')
         setSenha('')
+        admin(navigate)
       }).catch((error) => {
         console.log(error)
         setUsuario('')
         setSenha('')
       })
   }
-
 
   return (
     <Main>
@@ -62,7 +60,7 @@ function LoginPage() {
 
       <div>
         <Botao onClick={() => logar()}>Logar</Botao>
-        <Botao onClick={() => voltar(navigate)}>Voltar</Botao>
+        <Botao onClick={() => trocaTela(navigate)}>Voltar</Botao>
       </div>
 
     </Main>

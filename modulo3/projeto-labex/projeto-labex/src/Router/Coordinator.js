@@ -1,6 +1,12 @@
 export const trocaTela = (navigate) => {
 
+    navigate('/')
+}
+
+export const principal = (navigate) => {
+
     navigate('principal')
+
 }
 
 export const voltar = (navigate) => {
@@ -14,3 +20,19 @@ export const telaLogin = (navigate) => {
 
 }
 
+export const admin = (navigate) => {
+
+    navigate('/admin')
+
+}
+
+export const deslogar = (navigate) => {
+    localStorage.clear()
+    navigate('/login')
+}
+
+export const aplicacao = (navigate) => {
+
+    navigate('/aplicacao')
+
+}

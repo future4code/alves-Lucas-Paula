@@ -10,9 +10,10 @@ export const Cabecalho = styled.div`
 
 `
 
-export const Navegacao = styled.a`
+export const Navegacao = styled.p`
     color: white;
     height: 30px;
+    text-decoration: none;
     :hover{
         border: 3px solid;
         border-color: #001871;

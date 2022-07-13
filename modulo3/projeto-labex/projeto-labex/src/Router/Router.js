@@ -5,6 +5,8 @@ import Footer from '../Components/Footer/Footer'
 import Home from '../Pages/Home/HomePage'
 import ListTripsPage from '../Pages/ListTripsPage/ListTripsPage'
 import Login from '../Pages/LoginPage/LoginPage'
+import AdminHomePage from '../Pages/AdminHomePage/AdminHomePage'
+import ApplicationFormPage from '../Pages/ApplicationFormPage/ApplicationFormPage'
 const Router = () => {
     return (
         <div>
@@ -14,6 +16,8 @@ const Router = () => {
                     <Route index element={<Home />} />
                     <Route path="principal" element={<ListTripsPage />} />
                     <Route path="login" element={<Login />} />
+                    <Route path="admin" element={<AdminHomePage />} />
+                    <Route path="aplicacao" element={<ApplicationFormPage />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>
