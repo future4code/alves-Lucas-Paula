@@ -36,3 +36,9 @@ export const aplicacao = (navigate) => {
     navigate('/aplicacao')
 
 }
+
+export const criarViagem = (navigate) => {
+
+    navigate('/criar')
+
+}

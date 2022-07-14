@@ -4,7 +4,22 @@ import { useNavigate } from 'react-router-dom'
 import { voltar } from '../../Router/Coordinator'
 import { BASE_URL } from '../../Components/BaseURL'
 import useMostrarViagem from '../../Hooks/useMostrarViagem'
-import { Container, Botao, CampoDados, CampoSelection, Titulo } from './AppliCss'
+import { Formulario, CampoDados, Botao, Container, Titulo } from '../CreateTripPage/CreateTripCss'
+import useForm from '../../Hooks/useForm'
+import styled from 'styled-components'
+
+const CampoSeletor = styled.select`
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid;
+  width: 520px;
+  height: 50px;
+  font-size: 17px;
+  @media (max-width: 768px) {
+    width: 85%;
+  }
+`
 
 function ApplicationFormPage() {
 
@@ -12,49 +27,25 @@ function ApplicationFormPage() {
   const { dados } = useMostrarViagem("trips");
   const dadosApi = dados?.trips
   const [viagem, setViagem] = useState()
-  const [nome, setNome] = useState()
-  const [idade, setIdade] = useState()
-  const [texto, setTexto] = useState()
-  const [profissao, setProfissao] = useState()
-  const [pais, setPais] = useState()
 
+  const { form, pegaDados, limpaCampos } = useForm({
+    name: '',
+    age: '',
+    applicationText: '',
+    profession: '',
+    country: ''
+  })
 
-  const campoViagem = (e) => {
+  const campoFormulario = (e) => {
+    e.preventDefault()
+    limpaCampos()
+  }
+
+  const selecionaViagem = (e) => {
 
     setViagem(e.target.value)
 
   }
-
-  const campoNome = (e) => {
-
-    setNome(e.target.value)
-
-  }
-
-  const campoIdade = (e) => {
-
-    setIdade(e.target.value)
-
-  }
-
-  const campoTexto = (e) => {
-
-    setTexto(e.target.value)
-
-  }
-
-  const campoProfissao = (e) => {
-
-    setProfissao(e.target.value)
-
-  }
-
-  const campoPais = (e) => {
-
-    setPais(e.target.value)
-
-  }
-
 
   const exibeRespostaRequisicao = () => {
 
@@ -75,20 +66,18 @@ function ApplicationFormPage() {
   const aplicacao = (id) => {
 
     const body = {
-      "name": nome,
-      "age": idade,
-      "applicationText": texto,
-      "profession": profissao,
-      "country": pais
+      "name": form.name,
+      "age": form.age,
+      "applicationText": form.applicationText,
+      "profession": form.profession,
+      "country": form.country
     }
 
     axios.post(`${BASE_URL}trips/${id}/apply`, body)
       .then((response) => {
         console.log(response.data)
-        document.location.reload(true)
       }).catch((erro) => {
         console.log(erro)
-        document.location.reload(true)
       })
 
   }
@@ -98,30 +87,16 @@ function ApplicationFormPage() {
 
       <Titulo>Inscreva-se para uma viagem</Titulo>
 
-      <CampoSelection onChange={campoViagem}>
-        <option value={viagem}>Selecione uma Viagem</option>
-        {exibeRespostaRequisicao()}
-      </CampoSelection>
-
-
-      <div>
-        <CampoDados type='text' onChange={campoNome} placeholder="Nome" />
-      </div>
-
-      <div>
-        <CampoDados type='number' onChange={campoIdade} placeholder="Idade" />
-      </div>
-
-      <div>
-        <CampoDados type='text' onChange={campoTexto} placeholder="Texto de Canditura" />
-      </div>
-
-      <div>
-        <CampoDados type='text' onChange={campoProfissao} placeholder="Profissao" />
-      </div>
-
-      <div>
-        <CampoSelection name="paises" onChange={campoPais}>
+      <Formulario onSubmit={campoFormulario}>
+        <CampoSeletor onChange={selecionaViagem}>
+          <option value={viagem}>Selecione uma Viagem</option>
+          {exibeRespostaRequisicao()}
+        </CampoSeletor>
+        <CampoDados name='name' type='text' onChange={pegaDados} placeholder="Nome" />
+        <CampoDados name='age' type='number' onChange={pegaDados} placeholder="Idade" />
+        <CampoDados name='applicationText' type='text' onChange={pegaDados} placeholder="Texto de Canditura" />
+        <CampoDados name='profession' type='text' onChange={pegaDados} placeholder="Profissao" />
+        <CampoSeletor name="country" onChange={pegaDados}>
           <option value="">Selecione um País</option>
           <option value="Brasil">Brasil</option>
           <option value="Afeganistão">Afeganistão</option>
@@ -373,14 +348,13 @@ function ApplicationFormPage() {
           <option value="Wallis e Futuna">Wallis e Futuna</option>
           <option value="Zimbabwe">Zimbabwe</option>
           <option value="Zâmbia">Zâmbia</option>
-        </CampoSelection>
-      </div>
+        </CampoSeletor>
 
-
-      <div>
-        <Botao onClick={() => aplicacao(viagem)}>Candidatar</Botao>
-        <Botao onClick={() => voltar(navigate)}>Voltar</Botao>
-      </div>
+        <div>
+          <Botao onClick={() => aplicacao(viagem)}>Candidatar</Botao>
+          <Botao onClick={() => voltar(navigate)}>Voltar</Botao>
+        </div>
+      </Formulario>
 
 
     </Container>

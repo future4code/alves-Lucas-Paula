@@ -33,7 +33,7 @@ export const Botao = styled.button`
     border-radius: 50px;
     width: 150px;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px;
     background-color: #001871;
     color: white;
     border-color: #001871;

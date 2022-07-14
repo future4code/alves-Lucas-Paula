@@ -1,68 +1,51 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { BASE_URL } from '../../Components/BaseURL'
 import { trocaTela, admin } from '../../Router/Coordinator'
-import { Main, Botao, CampoTexto, Label } from './LoginCss'
+import { Main, Botao, CampoTexto, CampoButton, Titulo } from './LoginCss'
+import useForm from '../../Hooks/useForm'
 
 function LoginPage() {
 
-  const [usuario, setUsuario] = useState()
-  const [senha, setSenha] = useState()
   const navigate = useNavigate()
+  const { form, pegaDados, limpaCampos } = useForm({
+    email: '',
+    password: ''
+  })
 
-  const pegaUsuario = (e) => {
-
-    setUsuario(e.target.value)
-
-  }
-
-  const pegaUSenha = (e) => {
-
-    setSenha(e.target.value)
-
+  const campoFormulario = (e) => {
+    e.preventDefault()
+    limpaCampos()
   }
 
   const logar = () => {
 
     const body = {
-      'email': usuario,
-      'password': senha
+      email: form.email,
+      password: form.password
     }
 
     axios.post(`${BASE_URL}login`, body)
       .then((response) => {
         localStorage.setItem('token', response.data.token)
-        setUsuario('')
-        setSenha('')
         admin(navigate)
       }).catch((error) => {
         console.log(error)
-        setUsuario('')
-        setSenha('')
       })
   }
 
   return (
     <Main>
-
-      <h1>Login Admin</h1>
-
-      <div>
-        <label>Usuario:</label>
-        <CampoTexto value={usuario} onChange={pegaUsuario} />
-      </div>
-
-      <div>
-        <Label>Senha:</Label>
-        <CampoTexto type="password" value={senha} onChange={pegaUSenha} />
-      </div>
-
-      <div>
-        <Botao onClick={() => logar()}>Logar</Botao>
-        <Botao onClick={() => trocaTela(navigate)}>Voltar</Botao>
-      </div>
-
+      <Titulo>Login Admin</Titulo>
+      <form onSubmit={campoFormulario}>
+        <CampoTexto name='email' onChange={pegaDados} placeholder='Email' />
+        <CampoTexto name='password' type="password" onChange={pegaDados} placeholder='Senha' />
+        <CampoButton>
+          <Botao onClick={() => logar()}>Logar</Botao>
+          <Botao onClick={() => trocaTela(navigate)}>Voltar</Botao>
+        </CampoButton>
+      </form>
     </Main>
   )
 }

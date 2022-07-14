@@ -5,6 +5,7 @@ import Mercurio from '../Img/Mercurio.png'
 import Venus from '../Img/Venus.png'
 import Saturno from '../Img/Saturno.png'
 import Urano from '../Img/Urano.png'
+import Plutao from '../Img/Plutao.png'
 
 export default function TrocaImgPost(item) {
 
@@ -15,12 +16,14 @@ export default function TrocaImgPost(item) {
             return Jupter
         case 'Netuno':
             return Netuno
-        case 'Mercurio':
+        case 'Mercúrio':
             return Mercurio
         case 'Venus':
             return Venus
         case 'Saturno':
             return Saturno
+        case 'Plutão':
+            return Plutao
         default:
             return Urano
     }

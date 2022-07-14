@@ -20,8 +20,16 @@ export const CampoTexto = styled.input`
     margin: 10px;
     padding: 5px;
     border-radius: 10px;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `
 
-export const Label = styled.label`
-    margin-left: 10px;
+export const CampoButton = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+`
+
+export const Titulo = styled.h1`
+    color: #767676
 `
