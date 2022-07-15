@@ -33,6 +33,13 @@ export const Botao = styled.button`
     background-color: #001871;
     color: white;
     border-color: #001871;
+    @media (max-width: 768px) {
+        margin: 10px 10px 80px 10px;
+    }
+    :hover{
+        background-color: #B6D4E3;
+        border-color: #B6D4E3;
+    }
 `
 
 export const Titulo = styled.h1`

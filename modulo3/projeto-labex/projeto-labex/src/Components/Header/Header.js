@@ -1,8 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Cabecalho, Navegacao } from './HeaderCss'
+import { Cabecalho, Navegacao, LogoFoguete } from './HeaderCss'
 import { telaLogin, admin, trocaTela } from '../../Router/Coordinator'
-
+import Logo from '../../Img/Foguete.png'
 function Header() {
 
     const navigate = useNavigate()
@@ -10,7 +10,7 @@ function Header() {
 
         const token = localStorage.getItem('token')
 
-        if(token === null){
+        if (token === null) {
             telaLogin(navigate)
         } else {
             admin(navigate)
@@ -20,7 +20,7 @@ function Header() {
     return (
         <Cabecalho>
 
-            <img src='#' onClick={() => trocaTela(navigate)} alt='Logo' />
+            <LogoFoguete src={Logo} onClick={() => trocaTela(navigate)} alt='Logo' />
             <Navegacao onClick={() => confirmaLogado()}>Área Admin</Navegacao>
 
         </Cabecalho>

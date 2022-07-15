@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import useMostrarViagem from '../../Hooks/useMostrarViagem'
 import { useNavigate } from 'react-router-dom'
-import { Container, Item, Deletar, Titulo, Botao } from './AdminCss'
+import { Container, Item, Deletar, Titulo, Botao, Botao2 } from './AdminCss'
 import { deslogar, criarViagem } from '../../Router/Coordinator'
 import { BASE_URL } from '../../Components/BaseURL'
 import iconeLixeira from '../../Img/lixeira.png'
@@ -63,12 +63,12 @@ function AdminHomePage() {
         return <Container>
           <Botao onClick={() => criarViagem(navigate)}>Criar Viagem</Botao>
           {exibeRespostaRequisicao()}
-          <Botao onClick={() => deslogar(navigate)}>Deslogar</Botao>
+          <Botao2 onClick={() => deslogar(navigate)}>Deslogar</Botao2>
         </Container>
       default:
         return <Container>
           <TripDetailsPage id={id} />
-          <Botao onClick={() => mudaTela()}>Voltar</Botao>
+          <Botao2 onClick={() => mudaTela()}>Voltar</Botao2>
         </Container>
     }
 

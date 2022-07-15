@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { principal } from '../../Router/Coordinator'
 import useMostrarViagem from '../../Hooks/useMostrarViagem'
-import { Main, ConteudoPost, Post, IconePlaneta, Botao, Texto, Descricao } from './HomeCss'
+import { Main, ConteudoPost, Post, IconePlaneta, Botao, Texto, Descricao, Titulo } from './HomeCss'
 import TrocaImgPost from '../../Components/TrocaImgPost'
 
 
@@ -36,7 +36,7 @@ function HomePage() {
         })
 
       } else {
-        
+
         for (let i = 0; i < dadosApi.length; i++) {
           listPlaneta.push(dadosApi[i])
         }
@@ -60,7 +60,7 @@ function HomePage() {
 
   return (
     <Main>
-      <h1>Recente</h1>
+      <Titulo>Viagens Recentes</Titulo>
       <ConteudoPost>
         {exibeRespostaRequisicao()}
       </ConteudoPost>

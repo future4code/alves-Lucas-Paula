@@ -14,12 +14,17 @@ export const Botao = styled.button`
     background-color: #001871;
     color: white;
     border-color: #001871;
+    :hover{
+        background-color: #B6D4E3;
+        border-color: #B6D4E3;
+    }
 `
 
 export const CampoTexto = styled.input`
     margin: 10px;
     padding: 5px;
     border-radius: 10px;
+    border: 1px solid;
     @media (max-width: 768px) {
         width: 90%;
     }

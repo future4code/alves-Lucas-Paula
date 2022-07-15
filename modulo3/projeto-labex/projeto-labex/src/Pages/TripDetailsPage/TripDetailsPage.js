@@ -48,7 +48,7 @@ function TripDetailsPage(props) {
       setAtualizaTela(!atualizaTela)
     })
 
-    if(valor === false) {
+    if (valor === false) {
       alert('Candidato desqualificado!')
       setAtualizaTela(!atualizaTela)
     }

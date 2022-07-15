@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { voltar, aplicacao } from '../../Router/Coordinator'
 import useMostrarViagem from '../../Hooks/useMostrarViagem'
-import { Botao, Main, ConteudoPost, Post, IconePlaneta, Texto, Descricao } from '../Home/HomeCss'
+import { Botao, Main, ConteudoPost, Post, IconePlaneta, Texto, Descricao, Titulo } from '../Home/HomeCss'
 import TrocaImgPost from '../../Components/TrocaImgPost'
 
 function ListTripsPage() {
@@ -34,6 +34,7 @@ function ListTripsPage() {
 
   return (
     <Main>
+      <Titulo>Viagens</Titulo>
       <ConteudoPost>
         {exibeRespostaRequisicao()}
       </ConteudoPost>

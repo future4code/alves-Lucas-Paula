@@ -18,6 +18,8 @@ export const Post = styled.div`
     box-shadow: 5px 5px 10px RGB(0, 0, 0, 0.212);
     width: 20%;
     margin: 10px;
+    background-color: #B6D4E3;
+    border-color: white;
     @media (max-width: 800px) {
         width: 100%;
     }
@@ -33,10 +35,14 @@ export const Botao = styled.button`
     border-radius: 50px;
     width: 150px;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 10px 80px 10px;
     background-color: #001871;
     color: white;
     border-color: #001871;
+    :hover{
+        background-color: #B6D4E3;
+        border-color: #B6D4E3;
+    }
 `
 
 export const Texto = styled.p`
@@ -46,4 +52,7 @@ export const Texto = styled.p`
 
 export const Descricao = styled.p`
     color: #5F5E5E;
+`
+export const Titulo = styled.h1`
+    color: #767676;
 `
