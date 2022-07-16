@@ -35,10 +35,10 @@ function CreateTripPage() {
         auth: token
       }
     })
-      .then((response) => {
-        console.log(response)
-      }).catch((err) => {
-        console.log(err)
+      .then(() => {
+        alert('Viagem criada com sucesso!')
+      }).catch(() => {
+        alert(`Não foi possivel criar esta viagem. \n Verifique se preencheu corretamente.`)
       })
 
 
@@ -48,7 +48,6 @@ function CreateTripPage() {
 
     e.preventDefault()
     limpaCampos()
-    console.log(form)
   }
 
 

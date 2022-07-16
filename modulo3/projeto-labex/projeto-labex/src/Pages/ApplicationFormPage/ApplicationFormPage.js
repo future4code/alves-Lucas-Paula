@@ -74,10 +74,10 @@ function ApplicationFormPage() {
     }
 
     axios.post(`${BASE_URL}trips/${id}/apply`, body)
-      .then((response) => {
-        console.log(response.data)
-      }).catch((erro) => {
-        console.log(erro)
+      .then(() => {
+        alert(' Seus dados foram cadastrados com sucesso! \n Aguarde a avalição do seu perfil!')
+      }).catch(() => {
+        alert(' Dados incorretos ou nao preenchidos! \n Verifique se digitou corretamente!')
       })
 
   }

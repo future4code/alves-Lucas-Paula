@@ -23,8 +23,8 @@ function AdminHomePage() {
     if (recebeDados && recebeDados.length > 0) {
 
       return recebeDados.map((item) => {
-        return <Item key={item.id} onClick={() => mudaTela(item.id)}>
-          <Titulo>{item.name}</Titulo>
+        return <Item key={item.id}>
+          <Titulo onClick={() => mudaTela(item.id)}>{item.name}</Titulo>
           <Deletar src={iconeLixeira} alt='Icone de lixeira' onClick={() => deletarItem(item.id)} />
         </Item>
       })
@@ -37,16 +37,22 @@ function AdminHomePage() {
 
   const deletarItem = (item) => {
 
-    axios.delete(`${BASE_URL}trips/${item}`, {
-      headers: {
-        auth: token
-      }
-    }).then((response) => {
-      console.log(response.data)
-      document.location.reload(true)
-    }).catch((error) => {
-      console.log(error)
-    })
+    if (window.confirm('Tem certeza que deseja deletar esta viagem?')) {
+
+      axios.delete(`${BASE_URL}trips/${item}`, {
+        headers: {
+          auth: token
+        }
+      }).then(() => {
+        alert('Viagem deletada com suceso!')
+        document.location.reload(true)
+      }).catch((error) => {
+        alert(`Não foi possivel deletar esta viagem. \n Erro encontrado: ${error.message}`)
+      })
+    } else {
+      alert('Processo cancelado!')
+    }
+
 
   }
 
@@ -73,10 +79,11 @@ function AdminHomePage() {
     }
 
   }
+  const verificaLogin = token ? (<>{trocarTela()}</>) : (<>{deslogar(navigate)}</>)
 
   return (
     <>
-      {trocarTela()}
+      {verificaLogin}
     </>
   )
 }

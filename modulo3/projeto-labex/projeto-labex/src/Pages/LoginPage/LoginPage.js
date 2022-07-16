@@ -28,10 +28,11 @@ function LoginPage() {
 
     axios.post(`${BASE_URL}login`, body)
       .then((response) => {
+        alert("Logado com sucesso!")
         localStorage.setItem('token', response.data.token)
         admin(navigate)
       }).catch((error) => {
-        console.log(error)
+        alert(' Dados errados! \n Confirme os dados digitados.')
       })
   }
 

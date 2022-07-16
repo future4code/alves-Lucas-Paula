@@ -19,13 +19,12 @@ function TripDetailsPage(props) {
         auth: token
       }
     }).then((response) => {
-      console.log(response.data.trip)
       const requerimento = [response.data.trip]
       setDados(requerimento)
       setCandidato(response.data.trip.candidates)
       setAProvados(response.data.trip.approved)
     }).catch((error) => {
-      console.log(error)
+      console.log(error.message)
     })
 
   }, [props.id, token, atualizaTela])
@@ -40,19 +39,17 @@ function TripDetailsPage(props) {
       headers: {
         auth: token
       }
-    }).then((response) => {
-      console.log(response.data)
+    }).then(() => {
       setAtualizaTela(!atualizaTela)
-    }).catch((error) => {
-      console.log(error)
+    }).catch(() => {
       setAtualizaTela(!atualizaTela)
     })
 
-    if (valor === false) {
+    if (valor) {
+      alert('Canditado aceito com sucesso!')
+    } else {
       alert('Candidato desqualificado!')
-      setAtualizaTela(!atualizaTela)
     }
-
   }
 
 
